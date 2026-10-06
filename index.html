@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Student Council Sekolah Papua Harapan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Caveat:wght@600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand: #4B5F96;
+            --brand-d: #34447a;
+            --bg: #ffffff;
+            --card: #F4F6FB;
+            --ink: #1d2540;
+            --mute: #5d6685;
+            --gold: #f2b84b;
+            --line: #d5dbec
+        }
+
+        html {
+            scroll-padding-top: 60px;
+            scroll-behavior: smooth
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+            line-height: 1.6
+        }
+
+        a {
+            color: inherit
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: var(--brand-d);
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            padding: 8px 12px
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 99px;
+            white-space: nowrap;
+            font-size: 14px
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            background: rgba(255, 255, 255, .18);
+            outline: none
+        }
+
+        section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 56px 20px
+        }
+
+        h2 {
+            font-size: clamp(26px, 5vw, 38px);
+            margin: 0 0 16px;
+            line-height: 1.15
+        }
+
+        h3 {
+            margin: 0 0 6px
+        }
+
+        .hero {
+            background: var(--brand);
+            color: #fff;
+            padding: 48px 20px 64px;
+            text-align: center
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 7vw, 56px);
+            line-height: 1.08;
+            margin: 0 auto 10px;
+            max-width: 760px;
+            font-weight: 800
+        }
+
+        .hero p {
+            margin: 0 0 32px;
+            font-family: 'Caveat', cursive;
+            font-size: 26px;
+            color: var(--gold)
+        }
+
+        .strip {
+            display: flex;
+            justify-content: center
+        }
+
+        .pol {
+            background: #fff;
+            color: #222;
+            padding: 10px 10px 8px;
+            width: 150px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .28);
+            transition: transform .2s;
+            border: 0;
+            font: inherit;
+            text-align: center;
+            transform: rotate(-2deg)
+        }
+
+        .pol:hover {
+            transform: rotate(0) scale(1.03)
+        }
+
+        .pol img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: #cfd6ea
+        }
+
+        .pol.land {
+            width: 230px
+        }
+
+        .pol.land img {
+            aspect-ratio: 4/3
+        }
+
+        .hero .pol.land {
+            width: min(92%, 460px)
+        }
+
+        .pol span {
+            display: block;
+            font-family: 'Caveat', cursive;
+            font-size: 19px;
+            margin-top: 6px;
+            line-height: 1.1
+        }
+
+        .ann {
+            max-width: 960px;
+            margin: -34px auto 0;
+            padding: 0 20px;
+            position: relative
+        }
+
+        .ann-box {
+            background: linear-gradient(120deg, var(--gold), #ffd98a);
+            color: #2a2100;
+            border-radius: 18px;
+            padding: 18px 22px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .2);
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            animation: pulse 2.4s ease-in-out 3
+        }
+
+        .ann-box b {
+            font-size: 30px
+        }
+
+        @keyframes pulse {
+            50% {
+                transform: scale(1.015)
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            .ann-box {
+                animation: none
+            }
+
+            html {
+                scroll-behavior: auto
+            }
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px
+        }
+
+        .verse {
+            border-left: 5px solid var(--brand);
+            padding-left: 14px;
+            color: var(--mute)
+        }
+
+        ol.misi {
+            padding-left: 22px
+        }
+
+        ol.misi li {
+            margin-bottom: 10px
+        }
+
+        .row {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 22px 0
+        }
+
+        .sub {
+            text-align: center;
+            margin-top: 34px;
+            font-weight: 600;
+            color: var(--brand)
+        }
+
+        ul.nm {
+            margin: 0;
+            padding-left: 20px
+        }
+
+        .names {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px
+        }
+
+        .chip {
+            background: var(--card);
+            border: 1px solid var(--brand);
+            color: var(--brand);
+            border-radius: 99px;
+            padding: 5px 14px;
+            font: inherit;
+            cursor: pointer
+        }
+
+        button.chip:hover,
+        button.chip:focus-visible {
+            background: var(--brand);
+            color: #fff
+        }
+
+        details {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            padding: 2px 16px
+        }
+
+        summary {
+            cursor: pointer;
+            padding: 12px 0;
+            font-weight: 600;
+            list-style: none
+        }
+
+        summary::after {
+            content: "+";
+            float: right;
+            color: var(--brand);
+            font-size: 22px;
+            line-height: 1
+        }
+
+        details[open] summary::after {
+            content: "–"
+        }
+
+        details .names {
+            margin: 0 0 14px
+        }
+
+        button.go,
+        a.go {
+            display: inline-block;
+            background: var(--brand);
+            color: #fff;
+            border: 0;
+            border-radius: 10px;
+            padding: 11px 20px;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 4px 6px 4px 0
+        }
+
+        button.go:hover,
+        a.go:hover {
+            background: var(--brand-d)
+        }
+
+        button.alt {
+            background: #fff;
+            color: var(--brand);
+            border: 2px solid var(--brand)
+        }
+
+        button.alt:hover {
+            background: var(--brand);
+            color: #fff
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--ink);
+            font: inherit;
+            margin: 6px 0 12px
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px
+        }
+
+        .tl {
+            border-left: 3px solid var(--brand);
+            margin: 0 0 0 8px;
+            padding-left: 20px
+        }
+
+        .ev {
+            position: relative;
+            margin-bottom: 18px
+        }
+
+        .ev::before {
+            content: "";
+            position: absolute;
+            left: -29px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--brand)
+        }
+
+        .ev time {
+            font-size: 13px;
+            color: var(--mute)
+        }
+
+        .ev.past {
+            opacity: .55
+        }
+
+        .sch {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .sch.today {
+            background: #fff6dc;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: 600
+        }
+
+        .sch.past {
+            opacity: .5
+        }
+
+        .msg {
+            margin-top: 10px;
+            font-size: 15px;
+            color: var(--mute)
+        }
+
+        dialog {
+            border: 0;
+            border-radius: 6px;
+            padding: 0;
+            background: transparent
+        }
+
+        dialog::backdrop {
+            background: rgba(10, 14, 32, .75)
+        }
+
+        dialog .pol {
+            width: min(78vw, 340px);
+            margin: 0
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px
+        }
+
+        footer {
+            background: var(--brand-d);
+            color: #fff;
+            text-align: center;
+            padding: 36px 20px
+        }
+
+        footer a {
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .4)
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Menu">
+        <a href="#home">Beranda</a><a href="#about">Tentang</a><a href="#team">Tim</a><a href="#divisi">Divisi</a><a
+            href="#kegiatan">Kegiatan</a><a href="#anggota">Anggota</a><a href="#saran">Kotak Saran</a><a
+            href="#kontak">Kontak</a>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>Student Council Sekolah Papua Harapan</h1>
+        <p>#GrowTogether #CASH – Mark 10:45</p>
+        <div class="strip" id="homeStrip"></div>
+    </header>
+    <div class="ann" id="annWrap"></div>
+
+    <section id="about">
+        <h2>Apa itu Student Council?</h2>
+        <p>Student Council adalah organisasi resmi Sekolah Papua Harapan yang dikelola siswa terpilih untuk memimpin
+            kegiatan kesiswaan, melatih jiwa kepemimpinan, dan membantu mencapai tujuan sekolah.</p>
+        <div class="grid2">
+            <div class="card">
+                <h3>Wadah pembinaan</h3>Pusat pengembangan bakat, minat, dan potensi siswa.
+            </div>
+            <div class="card">
+                <h3>Latihan kepemimpinan</h3>Melatih siswa berorganisasi, bertanggung jawab, dan mengambil keputusan.
+            </div>
+            <div class="card">
+                <h3>Penggerak kegiatan</h3>Mengatur lomba, pentas seni, dan hari besar nasional.
+            </div>
+        </div>
+        <p>Tahun ini Student Council hadir dengan warna baru: 37 anggota dalam 11 divisi, dengan satu tujuan, memuliakan
+            nama Tuhan.</p>
+        <h3>Visi</h3>
+        <p class="verse">Mewujudkan Student Council sebagai wadah inklusif dan progresif yang mendorong setiap siswa
+            untuk bertumbuh, melayani dengan integritas, serta memberikan dampak positif yang nyata bagi komunitas
+            sekolah (Markus 10:45).</p>
+        <h3>Misi</h3>
+        <ol class="misi">
+            <li>Memberikan potensi terbaik dalam kinerja Student Council untuk kemuliaan Tuhan (Kolose 3:23).</li>
+            <li>Menumbuhkan lingkungan kerja internal yang aktif, saling mendukung, dan berdampak.</li>
+            <li>Menyediakan platform strategis untuk mengasah keterampilan kepemimpinan, minat, dan passion melalui
+                program terstruktur.</li>
+            <li>Merancang dan menjalankan program kerja yang relevan, solutif, dan melibatkan seluruh siswa secara
+                inklusif.</li>
+            <li>Membangun evaluasi berkala dan sistem yang menjaga keberlanjutan dan kualitas Student Council dari tahun
+                ke tahun.</li>
+        </ol>
+    </section>
+
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="row" id="pembina"></div>
+        <div class="row" id="koor"></div>
+        <div id="pairs"></div>
+        <h3 class="sub">MPK</h3>
+        <div class="grid2" id="mpk"></div>
+    </section>
+
+    <section id="divisi">
+        <h2>Divisi</h2>
+        <div id="divList"></div>
+    </section>
+
+    <section id="kegiatan">
+        <h2>Timeline kegiatan</h2>
+        <div class="tl" id="timeline"></div>
+    </section>
+
+    <section id="anggota">
+        <h2>Khusus Anggota</h2>
+        <div class="card" id="gate">
+            <label for="code">Masukkan kode anggota</label>
+            <input id="code" type="password" autocomplete="off">
+            <button class="go" id="unlock">Masuk</button>
+            <div class="msg" id="gMsg"></div>
+        </div>
+
+        <div id="panel" hidden>
+            <h3 id="who"></h3>
+            <div class="card">
+                <h3>Absen rapat</h3>
+                <p id="rapatInfo"></p>
+                <button class="go" id="bHadir">Hadir</button>
+                <button class="go alt" id="bTidak">Tidak hadir</button>
+                <div id="hadirBox" hidden>
+                    <p>Terima kasih sudah hadir. Ada pendapat atau evaluasi soal rapat tadi?</p>
+                    <button class="go" id="fOpini">Tulis pendapat</button>
+                </div>
+                <div id="tidakBox" hidden>
+                    <p>Silakan isi alasan kamu tidak hadir di rapat ini.</p>
+                    <button class="go" id="fAlasan">Isi alasan</button>
+                </div>
+                <div class="msg" id="rMsg"></div>
+            </div>
+
+            <div class="card">
+                <h3>Absen patroli</h3>
+                <div id="jadwal"></div>
+                <p>Anggota yang bertugas mengisi nama dan kelas siswa serta jenis pelanggarannya di Google Sheets.</p>
+                <button class="go" id="fSheet">Buka Google Sheets</button>
+                <div class="msg" id="pMsg"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="saran">
+        <h2>Kotak saran anonim</h2>
+        <div class="card">
+            <p>Tulis masukanmu untuk Student Council lewat formulir anonim. Kami tidak meminta nama, kelas, atau akun,
+                dan tidak ada cara untuk mengetahui pengirimnya.</p>
+            <button class="go" id="sarSend">Buka kotak saran</button>
+            <div class="msg" id="sarMsg"></div>
+        </div>
+    </section>
+
+    <footer id="kontak">
+        <h2 style="color:#fff">Kontak</h2>
+        <p>Gmail: <a id="mail"></a><br>Instagram: <a href="https://instagram.com/sph_student_council" target="_blank"
+                rel="noopener">@sph_student_council</a><br>
+        <p style="font-family:'Caveat',cursive;font-size:24px;color:var(--gold)">#GrowTogether #CASH – Mark 10:45</p>
+    </footer>
+
+    <dialog id="dlg">
+        <div class="pol"><img id="dImg" alt=""><span id="dCap"></span></div>
+    </dialog>
+
+    <script>
+        var $ = function (i) { return document.getElementById(i) };
+        var PH = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#cfd6ea"/><circle cx="50" cy="38" r="17" fill="#8d9acb"/><path d="M16 100c0-24 15-38 34-38s34 14 34 38z" fill="#8d9acb"/></svg>');
+        function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML }
+        function pol(p, land, cap) { return '<button class="pol' + (land ? ' land' : '') + '" data-n="' + esc(p.name || p.title) + '" data-p="' + esc(p.photo || '') + '"><img src="' + esc(p.photo || PH) + '" alt="Foto ' + esc(p.name || p.title) + '"><span>' + esc(cap || p.name || p.title) + (p.role ? '<br><small style="font-family:inherit;font-size:14px">' + esc(p.role) + '</small>' : '') + '</span></button>' }
+        function chip(x) { return '<button class="chip" data-n="' + esc(x.name) + '" data-p="' + esc(x.photo || '') + '">' + esc(x.name) + '</button>' }
+        function show(n, p) { $("dImg").src = p || PH; $("dImg").alt = "Foto " + n; $("dCap").textContent = n; $("dlg").showModal() }
+        document.addEventListener("click", function (e) { var b = e.target.closest("[data-n]"); if (b) show(b.dataset.n, b.dataset.p); if (e.target === $("dlg")) $("dlg").close() });
+
+        fetch("data/content.json").then(function (r) { return r.json() }).then(function (C) {
+            var today = new Date().toISOString().slice(0, 10);
+            function openForm(url, msg) { if (!url) { msg.textContent = "Link formulir belum diisi di content.json."; return } window.open(url, "_blank", "noopener"); msg.textContent = "Formulir dibuka di tab baru." }
+
+            /* Beranda: 1 foto landscape */
+            $("homeStrip").innerHTML = pol({ name: C.homeCaption || "Student Council 2026", photo: C.homePhoto }, true);
+            if (C.announcements && C.announcements.length) { $("annWrap").innerHTML = C.announcements.map(function (a) { return '<div class="ann-box" style="margin-bottom:10px"><b>📣</b><div><h3 style="margin:0">' + esc(a.title) + '</h3>' + esc(a.text) + '</div></div>' }).join("") }
+            else $("annWrap").style.display = "none";
+
+            /* Tim */
+            $("pembina").innerHTML = pol(C.pembina, true, C.pembina.name + " · " + C.pembina.role);
+            $("koor").innerHTML = C.koor.map(function (p) { return pol(p) }).join("");
+            var pr = ""; for (var i = 0; i < C.pairs.length; i += 2)pr += '<div class="row">' + pol(C.pairs[i]) + (C.pairs[i + 1] ? pol(C.pairs[i + 1]) : "") + '</div>';
+            $("pairs").innerHTML = pr;
+            /* MPK: nama saja */
+            $("mpk").innerHTML = C.mpk.map(function (m) { return '<div class="card"><h3>' + esc(m.title) + '</h3><ul class="nm">' + m.members.map(function (x) { return '<li>' + esc(x) + '</li>' }).join("") + '</ul></div>' }).join("");
+
+            /* Divisi */
+            $("divList").innerHTML = C.divisi.map(function (d) { return '<details><summary>' + esc(d.title) + '</summary><div class="names">' + d.members.map(chip).join("") + '</div></details>' }).join("");
+
+            /* Timeline */
+            $("timeline").innerHTML = C.events.slice().sort(function (a, b) { return a.date < b.date ? -1 : 1 }).map(function (e) { var d = new Date(e.date + "T00:00:00"); return '<div class="ev' + (e.date < today ? ' past' : '') + '"><time>' + d.toLocaleDateString("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + '</time><h3>' + esc(e.title) + '</h3>' + esc(e.note || "") + '</div>' }).join("") || "Belum ada kegiatan.";
+
+            /* Khusus anggota: kode berbeda tiap anggota */
+            var codeMap = {}; (C.codes || []).forEach(function (c) { codeMap[String(c.code).trim().toUpperCase()] = c.name });
+            $("unlock").onclick = function () {
+                var n = codeMap[$("code").value.trim().toUpperCase()];
+                if (!n) { $("gMsg").textContent = "Kode salah."; return }
+                $("gate").hidden = true; $("panel").hidden = false;
+                $("who").textContent = "Halo, " + n + "!"
+            };
+            $("code").addEventListener("keydown", function (e) { if (e.key === "Enter") $("unlock").click() });
+            $("rapatInfo").textContent = C.rapatInfo || "";
+            $("bHadir").onclick = function () { $("hadirBox").hidden = false; $("tidakBox").hidden = true };
+            $("bTidak").onclick = function () { $("tidakBox").hidden = false; $("hadirBox").hidden = true };
+            $("fOpini").onclick = function () { openForm(C.opinionForm, $("rMsg")) };
+            $("fAlasan").onclick = function () { openForm(C.absenceForm, $("rMsg")) };
+
+            /* Patroli */
+            $("jadwal").innerHTML = (C.patroli || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1 }).map(function (s) { var d = new Date(s.date + "T00:00:00"); return '<div class="sch' + (s.date === today ? ' today' : s.date < today ? ' past' : '') + '"><span>' + d.toLocaleDateString("id-ID", { weekday: "long", day: "numeric", month: "long" }) + (s.date === today ? ' (hari ini)' : '') + '</span><span>' + s.names.map(esc).join(", ") + '</span></div>' }).join("") || "<p>Jadwal belum diisi.</p>";
+            $("fSheet").onclick = function () { openForm(C.patrolSheet, $("pMsg")) };
+
+            /* Saran anonim */
+            $("sarSend").onclick = function () { openForm(C.suggestionForm, $("sarMsg")) };
+
+            /* Kontak */
+            $("mail").textContent = C.email; $("mail").href = "mailto:" + C.email;
+
+        }).catch(function (e) { document.body.insertAdjacentHTML("afterbegin", '<p style="padding:20px;background:#fee;color:#900">Error: ' + esc(e.message) + '</p>') });
+    </script>
+</body>
+
+</html>
