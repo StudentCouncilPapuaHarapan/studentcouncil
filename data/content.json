@@ -28,20 +28,25 @@
   {"code": "SC2026+Scrimshander", "name": "Clarissa"},
   {"code": "SC2026+Xerts", "name": "Princess"},
   {"code": "SC2026+Zamboni", "name": "Marlien"},
-  {"code": "SC2026+Yaffle", "name": "Ghichell"},
-  {"code": "SC2026+Canoodie", "name": ""},
-  {"code": "SC2026+Gubbrins", "name": ""},
-  {"code": "SC2026+Igloo", "name": ""},
-  {"code": "SC2026+Muckrake", "name": ""},
-  {"code": "SC2026+Outrageous", "name": ""},
-  {"code": "SC2026+Snafu", "name": ""},
-  {"code": "SC2026+Doodad", "name": ""},
-  {"code": "SC2026+Umpteen", "name": ""},
-  {"code": "SC2026+Copycat", "name": ""},
-  {"code": "SC2026+Sleepyhead", "name": ""},
-  {"code": "SC2026+Bookworm", "name": ""},
-  {"code": "SC2026+Goofball", "name": ""},
-  {"code": "SC2026+Tootsie", "name": ""}
+  {"code": "SC2026+Yaffle", "name": "Katherine"},
+  {"code": "SC2026+Canoodie", "name": "Febriyanti"},
+  {"code": "SC2026+Gubbrins", "name": "Arashel"},
+  {"code": "SC2026+Igloo", "name": "Nikita"},
+  {"code": "SC2026+Muckrake", "name": "Adriana"},
+  {"code": "SC2026+Outrageous", "name": "Merry"},
+  {"code": "SC2026+Snafu", "name": "Marpince"},
+  {"code": "SC2026+Doodad", "name": "Rifka"},
+  {"code": "SC2026+Umpteen", "name": "Claudya"},
+  {"code": "SC2026+Copycat", "name": "Michelle"},
+  {"code": "SC2026+Sleepyhead", "name": "Yemuel"},
+  {"code": "SC2026+Bookworm", "name": "Bernika"},
+  {"code": "SC2026+Goofball", "name": "Joceline"},
+  {"code": "SC2026+Tootsie", "name": "Yustin"},
+  {"code": "SC2026+lanternfish", "name": "Nadine"},
+  {"code": "SC2026+thicketroot", "name": "Reni"},
+  {"code": "SC2026+crestfall", "name": "Meiland"},
+  {"code": "SC2026+blossom", "name": "Carissa"},
+  {"code": "SC2026+meadowlark", "name": "Donald"}
 ],
   "rapatInfo": "Rapat Student Council: isi hari, jam, dan tempat di sini",
   "absenceForm": "https://forms.gle/drwgQFYyqZPyrLpQ9",
@@ -274,7 +279,7 @@
           "photo": ""
         },
         {
-          "name": "(Katherine Stefanny Dealove Tulaseket - 10 Quiet Strength",
+          "name": "Katherine Stefanny Dealove Tulaseket - 10 Quiet Strength",
           "photo": ""
         }
       ]
